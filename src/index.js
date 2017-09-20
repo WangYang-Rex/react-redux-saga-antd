@@ -52,9 +52,9 @@ class App extends React.Component {
     }
 }
 
-import PageLogin from './containers/login.js';
-import PageHome from './containers/home/home.js';
-import PagePersonManage from './containers/personmanage/personmanage.js';
+import PageLogin from './page/login.js';
+import PageHome from './page/home/home.js';
+import PagePersonManage from './page/personmanage/personmanage.js';
 
 // Render the main component into the dom
 ReactDOM.render(
