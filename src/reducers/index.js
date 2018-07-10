@@ -1,9 +1,6 @@
 import { combineReducers } from 'redux';
-import personmanage from './personmanage';
-import user from './user';
-
+import app from './app';
 
 export default combineReducers({
-  user,
-  personmanage
+  app,
 });

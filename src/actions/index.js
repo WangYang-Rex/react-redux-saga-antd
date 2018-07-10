@@ -1,3 +1,2 @@
-export * from './user';
-export * from './psersonmanage';
-
+export * from './app';
+export * from 'pages/home/action';

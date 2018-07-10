@@ -1,25 +1,50 @@
 
 import React from 'react';
-require('./home.styl');
-
-import { Input } from 'antd';
-
+import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as Act from 'actions';
+import './Home.styl';
 
 class Home extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            isShopwFilter : true
-        };
-    }
-    render() {
-        return (
-            <div className="home">
-                首页
-            </div>
-        );
-    }
+	constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
+	render() {
+		return (
+			<div className="home">
+        page home
+      </div>
+		);
+  }
+    
+  componentWillMount() {
+  // this.props.dispatch({
+  // 	type: Act.GET_DEPT_LIST
+  // });
+  }
+  componentDidMount() {}
+  componentWillReceiveProps(nextProps) {}
+  shouldComponentUpdate(nextProps, nextState) { return true; }
+  componentWillUpdate(nextProps, nextState) {}
+  componentDidUpdate(prevProps, prevState) {}
+  componentWillUnmount() {}
 }
 
-module.exports = Home;
+// Uncomment properties you need
+// PersonmanageComponent.propTypes = {};
+// PersonmanageComponent.defaultProps = {};
+
+const mapStateToProps = state => {
+	return {
+	}
+}
+function mapDispatchToProps(dispatch) {
+  // const actions = {};
+  // const actionMap = { actions: bindActionCreators(actions, dispatch) };
+  // return actionMap;
+  return {}
+}
+export default connect(mapStateToProps)(Home);
