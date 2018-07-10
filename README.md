@@ -5,3 +5,7 @@
 npm install
 npm start
 ```
+
+react@15.x
+webpack@3.x
+antd@3.x
