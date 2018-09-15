@@ -1,12 +1,17 @@
 {
-    "presets": [
-      "es2015",
-      "stage-0",
-      "react"
-    ],
-    "plugins": [
-      "transform-decorators-legacy",
-      [ "import", { "libraryName": "antd", "style": "css" }] // `style: true` 会加载 less 文件
+  "presets": [
+    "es2015",
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    [ 
+      "import",
+      { "libraryName": "antd", "style": "true" }
     ]
-  }
-  
+  ],
+  "ignore":[
+    "jquery.min.js"
+]
+}

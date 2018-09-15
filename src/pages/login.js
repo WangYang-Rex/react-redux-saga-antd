@@ -9,12 +9,10 @@ import util from 'util';
 class login extends Component {
 
 	componentWillMount() {
-		// if(util.getUrlParam('needAuth')){
-			this.props.dispatch({
-				type: Act.DD_CONFIG,
-				needAuth: true
-			});
-		// }
+		this.props.dispatch({
+			type: Act.DD_CONFIG,
+			needAuth: true
+		});
 	}
 	render() {
 	  //测试哈哈

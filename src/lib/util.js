@@ -1,5 +1,5 @@
 import { takeEvery, takeLatest } from 'redux-saga/effects';
-import { message } from 'antd';
+// import { message } from 'antd';
 
 let callTakeEvery = function*(action, method) {
   return yield takeEvery(action, function*(...arg) {

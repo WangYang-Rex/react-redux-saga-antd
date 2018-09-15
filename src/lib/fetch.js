@@ -6,7 +6,7 @@
  */
 // https://github.com/github/fetch
 import 'whatwg-fetch';
-import { message, Modal } from 'antd'
+// import { message, Modal } from 'antd'
 import React from 'react';
 
 let defaultOption = {
@@ -25,24 +25,24 @@ let commonRes = (p) => {
 			if (res.result >= 100 && res.result <= 200) {
 				return res.data || true;
 			} else if (res.result == 327) {
-				// 判断授权是否超过上限
-				Modal.info({
-					title: '超过授权上限了',
-					content: (
-						<div>
-							<p>当前用户版本，最多支持{util.getValueFromCookieByKey("crm_item_max_people")}人，已授权{util.getValueFromCookieByKey("crm_item_max_people")}人了</p>
-							<p>请联系客服进行升级，电话：13018967365</p>
-						</div>
-					),
-					onOk() { },
-				})
+				// // 判断授权是否超过上限
+				// Modal.info({
+				// 	title: '超过授权上限了',
+				// 	content: (
+				// 		<div>
+				// 			<p>当前用户版本，最多支持{util.getValueFromCookieByKey("crm_item_max_people")}人，已授权{util.getValueFromCookieByKey("crm_item_max_people")}人了</p>
+				// 			<p>请联系客服进行升级，电话：13018967365</p>
+				// 		</div>
+				// 	),
+				// 	onOk() { },
+				// })
 				return
 			} else {
 				if (res.result == 702 || res.result == 703) {
 					location.hash = '/login?needAuth=true&expired=true'
 					return
 				}
-				message.error(res.message);
+				// message.error(res.message);
 				throw res;
 			}
 		});

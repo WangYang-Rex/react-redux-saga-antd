@@ -16,10 +16,10 @@ var happyThreadPool = HappyPack.ThreadPool({ size: 5 });
 let config = Object.assign({}, baseConfig, {
   entry: {
     index: path.join(__dirname, '../src/index'),
-    vendor: ['react', 'redux', 'react-redux', 'react-dom', 'moment']
+    vendor: ['react', 'redux', 'react-redux', 'react-dom']
   },
   output: {
-    path: path.join(__dirname, '../../crm-release/pc'),
+    path: path.join(__dirname, '../dist'),
     filename: 'app.js',
     sourceMapFilename: '[file].map',
     // publicPath: defaultSettings.publicPath,
@@ -42,7 +42,7 @@ let config = Object.assign({}, baseConfig, {
       //允许 HappyPack 输出日志
       verbose: true,
     }),
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /zh-cn/), //指定moment的local
+    // new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /zh-cn/), //指定moment的local
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.LoaderOptionsPlugin({
       debug: true
@@ -71,7 +71,7 @@ let config = Object.assign({}, baseConfig, {
       disable: false,
       allChunks: true
     }),
-    // new BundleAnalyzerPlugin(), //对打包资源的分析插件
+    new BundleAnalyzerPlugin(), //对打包资源的分析插件
   ],
   module: defaultSettings.getDefaultModules(true)
 });
