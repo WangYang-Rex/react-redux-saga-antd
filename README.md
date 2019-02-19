@@ -1,4 +1,4 @@
-# pinyoutuan_mp_qd
+# webpack3 + react + redux + saga
 
 #### 项目介绍
 公众号前端
