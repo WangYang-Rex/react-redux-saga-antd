@@ -113,18 +113,18 @@ const pluginsBuild = [
 const plugins = {
   dev: [].concat(pluginsPublic, pluginsBuild),
   development: [].concat(
-    new BundleAnalyzerPlugin({   //另外一种方式
-      analyzerMode: 'server',
-      analyzerHost: '127.0.0.1',
-      analyzerPort: 8889,
-      reportFilename: 'report.html',
-      defaultSizes: 'parsed',
-      openAnalyzer: true,
-      generateStatsFile: false,
-      statsFilename: 'stats.json',
-      statsOptions: null,
-      logLevel: 'info',
-    }),
+    // new BundleAnalyzerPlugin({   //另外一种方式
+    //   analyzerMode: 'server',
+    //   analyzerHost: '127.0.0.1',
+    //   analyzerPort: 8889,
+    //   reportFilename: 'report.html',
+    //   defaultSizes: 'parsed',
+    //   openAnalyzer: true,
+    //   generateStatsFile: false,
+    //   statsFilename: 'stats.json',
+    //   statsOptions: null,
+    //   logLevel: 'info',
+    // }),
     new HtmlWebpackPlugin({
       template: `${__dirname}/html/start.html`, //源html
       inject: 'body', //注入到哪里
